@@ -73,6 +73,14 @@
     </dependency>
 
 
+             <dependency>
+    <groupId>org.apache.maven.doxia</groupId>
+    <artifactId>doxia-core</artifactId>
+    <version>1.4</version>
+</dependency>
+
+
+
 
     </dependencies>
 
