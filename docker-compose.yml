@@ -7,7 +7,7 @@ services:
     environment:
        MYSQL_ROOT_PASSWORD: mysql
        MYSQL_DATABASE: tpfoyer
-       MYSQL_INNODB_FORCE_REDO: true
+       MYSQL_INNODB_FORCE_REDO: "true"
     ports:
       - "3306:3306"
     volumes:
