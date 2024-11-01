@@ -7,8 +7,9 @@ services:
     environment:
        MYSQL_ROOT_PASSWORD: mysql
        MYSQL_DATABASE: tpfoyer
+       MYSQL_INNODB_FORCE_REDO: true
     ports:
-      - "3307:3306"
+      - "3306:3306"
     volumes:
       - db:/var/lib/mysql
 
@@ -21,7 +22,7 @@ services:
       - "8089:8089"
     environment:
       SPRING_APPLICATION_JSON: '{
-        "spring.datasource.url"  : "jdbc:mysql://mysqldb:3307/tpfoyer?createDatabaseIfNotExist=true&useSSL=false",
+        "spring.datasource.url"  : "jdbc:mysql://mysqldb:3306/tpfoyer?createDatabaseIfNotExist=true&useSSL=false",
         "spring.datasource.username" : "mysql",
         "spring.datasource.password" : "mysql",
         "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.MySQL8Dialect",
