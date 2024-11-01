@@ -2,8 +2,8 @@ version: "3.8"
 
 services:
   mysqldb:
-    image: mysql:latest
-    restart: "no"
+    image: mysql:5.7
+    restart: unless-stopped
     environment:
        MYSQL_ROOT_PASSWORD: chaima
        MYSQL_DATABASE: tpfoyer_db
